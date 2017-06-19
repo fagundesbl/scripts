@@ -1,8 +1,11 @@
-import shutil
-import os
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import shutil, os
+
+print('Script para organizar arquivos')
 
 # Pasta
-sync = '/home/bfagundes/Sync'
+sync = '/home/bfagundes/Arquivos'
 documents = sync + '/Files/Documents'
 
 caminhos = [os.path.join(sync, nome) for nome in os.listdir(sync)]
@@ -13,17 +16,26 @@ gddoc = [arq for arq in arquivos if arq.lower().endswith(".gddoc")]
 gdsheet = [arq for arq in arquivos if arq.lower().endswith(".gdsheet")]
 pdf = [arq for arq in arquivos if arq.lower().endswith(".pdf")]
 odt = [arq for arq in arquivos if arq.lower().endswith(".odt")]
+docx = [arq for arq in arquivos if arq.lower().endswith(".docx")]
 
 # Movendo os arquivos
 for arq in gddoc:
-    shutil.move(arq, documents + '/docs')
+	print(arq)
+	shutil.move(arq, documents + '/docs/')
+	
+for arq in docx:
+	print(arq)
+	shutil.move(arq, documents + '/docs/')
 
 for arq in odt:
-    shutil.move(arq, documents + '/docs')
+	print(arq)
+	shutil.move(arq, documents + '/docs/')
 
 for arq in gdsheet:
-    shutil.move(arq, documents + '/sheets')
+	print(arq)
+	shutil.move(arq, documents + '/sheets/')
 
 for arq in pdf:
-    shutil.move(arq, documents + '/shelf')
+	print(arq)
+	shutil.move(arq, documents + '/shelf/')
 
