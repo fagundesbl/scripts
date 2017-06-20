@@ -58,7 +58,7 @@ def passwd(val):
 if __name__ == "__main__":
     site = input('Entre com o nome do site : ').lower().capitalize()
     key = input('Digite a chave de acesso : ')  # key = getpass.getpass('Digite a chave de acesso : ')
-    num = int(input('Infome a variação: '))
+    num = int(input('Infome a variacao: '))
 
     # Criando o hash
     if type(num) is int:
